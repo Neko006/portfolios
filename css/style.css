@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofadi+One&display=swap');
+
+:root {
+
+    --primaryTextColor: #2e2d2d;
+    --secondaryTextColor: #4684a3;
+
+    --primaryBackgroundColor: #E8ECEF;
+    --secondaryBackgroundColor: #fffdfd;
+    --thirdBackgroundColor: #dbe7f1;
+
+    --borderColor: #817f7f;
+    --lineColor: #d9d9d9;
+
+    --primaryIconColor: #7c74f1;
+    --pramaryIconColorHobver: #5d51e8;
+
+    --sectionPadding: 9rem;
+
+    --itemBorderRadius: .8rem;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", system-ui;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primaryBackgroundColorS);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p, label, span, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.main-container  {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+
+}
+
+/* buttem */
+
+.btn {
+    padding: 1rem 1.5em;
+    background: white;
+    border: 1.5px solid var(--borderColor);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* title */
+
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+} 
+
+
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    color: var(--secondaryTextColor);
+    position: relative;
+    width: fit-content;
+    font-weight: 400;
+    font-size: .9rem;
+    padding-left: 40px;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem
+}
+
+
+
+
+
+
+
+
+
+
+
+/* style */
+
+/* logo and navigastion  */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color:  var(--primaryTextColor);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+/* buger */
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* and burger */
+
+
+/* hero season */
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.3rem 0 2rem;
+    letter-spacing: .3rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor);
+}
+
+.hero-right img {
+    width: 90%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* services section  */
+
+#services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+
+.services .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.service     {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.services-icon {
+    background: var(--thirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: .5rem;
+}
+
+.services-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+
+/* and services section  */
+
+/* PORTFOLIO */
+
+    #portfolios {
+        padding: var(--sectionPadding);
+    }
+
+    .portfolio {
+        border-radius: var(--itemBorderRadius);
+        overflow: hidden;
+        border: 1px solid var(--borderColor);
+    }
+
+    .portfolio-cover {
+        height: 250px;
+    }
+
+    .portfolio-cover img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .portfolio-info {
+        padding: 2rem 1.5rem;
+    }
+
+    .portfolio-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .portfolio h4 {
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+
+    .portfolio-title a svg:hover {
+        fill: var(--pramaryIconColorHobver);
+    }
+
+    .portfolio-title a svg {
+        transition: .3s ease-in-out;
+    }
+
+    .portfolio-tags {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .portfolio-tags div {
+        border: 1px solid var(--borderColor);
+        font-size: .9rem;
+        margin: .4rem 1rem;
+        color: var(--secondaryTextColor);
+        padding: .4rem .2rem;
+    }
+
+
+
+
+/* and PORTFOLIO */
+
+/* Skills and education */
+
+    #skil {
+        padding: var(--sectionPadding);
+        background: var(--secondaryBackgroundColor);
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 3px;
+    }
+
+    .educasion {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .educasion .line {
+        padding: 1rem 0.7rem;
+    }
+    
+    .educasion .line div {
+        width: 2px;
+        height: 100%;
+        background: var(--borderColor);
+        position: relative;
+    }
+    .educasion-info p {
+        margin: 0.6rem 0 1.4rem;
+    }
+    
+    .educasion-year {
+        margin-bottom: 3rem;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 1.5rem;
+    }
+
+    .skills-right {
+        line-height: 2rem;
+        padding: 0 1rem;
+    }
+
+/* and Skills and education */
+
+/* contact seasen  */
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 5rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.8rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    resize: none;
+    border-radius: 3px;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #4684a3;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--pramaryIconColorHobver);
+}
+
+.contact-item-icon {
+    background: var(--thirdBackgroundColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+/* and contaaact */
+
+/* footer */
+
+    footer {
+        padding: 4rem;
+        background: var(--secondaryBackgroundColor);
+        text-align: center;
+    }
+
+    .footer-icons {
+        margin-bottom: 1rem;
+    }
+
+
+    .footer-icons a {
+        margin: 0 .5rem;
+    }
+
+    .footer-icons svg {
+        fill: #3e3f40;
+    }
+
+    .footer-icons a:hover svg {
+        fill: #000;
+    }
+    /* and footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* end style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
